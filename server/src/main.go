@@ -7,5 +7,12 @@ import (
 func main() {
 	router := gin.Default()
 
+	router.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"messages":    "pong",
+			"testMessage": "ping",
+		})
+	})
+
 	router.Run(":8000")
 }

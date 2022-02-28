@@ -14,19 +14,19 @@ services:
     stdin_open: true
     tty: true
 
-  # server:
-  #   build:
-  #     context: .
-  #     dockerfile: ./docker/server/Dockerfile
-  #   container_name: questar-server
-  #   volumes:
-  #     - ./server/src:/go/src
-  #   command: go run main.go
-  #   ports:
-  #     - "8000:8000"
-  #   tty: true
-  #   depends_on:
-  #     - db
+  server:
+    build:
+      context: .
+      dockerfile: ./docker/server/Dockerfile
+    container_name: questar-server
+    volumes:
+      - ./server/src:/go/src
+    command: air
+    ports:
+      - "8000:8000"
+    tty: true
+    depends_on:
+      - db
 
   db:
     build:
