@@ -1,2 +1,5 @@
 /.vscode/.history/
 /.DS_Store
+/db/postgres/
+/db/log/
+/server/src/tmp/

@@ -33,6 +33,9 @@ services:
       context: .
       dockerfile: ./docker/db/Dockerfile
     container_name: questar-db
+    volumes:
+      - ./db/postgres:/var/lib/postgresql/data
+      - ./db/logs:/var/log
     ports:
       - "5332:5432"
     environment:
