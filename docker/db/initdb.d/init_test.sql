@@ -4,8 +4,8 @@ CREATE TABLE IF NOT EXISTS users (
     password VARCHAR(30) NOT NULL
 );
 INSERT INTO users
-VALUES(1, testuser1, test1);
+VALUES('1', 'testuser1', 'test1');
 INSERT INTO users
-VALUES(2, testuser2, test2);
+VALUES('2', 'testuser2', 'test2');
 INSERT INTO users
-VALUES(3, testuser3, test3);
+VALUES('3', 'testuser3', 'test3');
