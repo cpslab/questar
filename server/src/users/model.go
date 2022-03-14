@@ -1,7 +1,7 @@
 package users
 
 type User struct {
-	Id       string
+	Id       int
 	UserName string
 	Password string
 }

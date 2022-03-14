@@ -1,10 +1,21 @@
 package users
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
 
-func UsersRegister(router *gin.RouterGroup) {
-	router.POST("/user/register", UserRegister)
-	router.GET("/user", UserRetrieve)
-	router.PUT("/user/update", UserUpdate)
-	router.DELETE("/user/delete", UserDelete)
+	"github.com/gin-gonic/gin"
+)
+
+func UserRegister(router *gin.RouterGroup) {
+	router.POST("/registration", UserRegistration)
+	router.GET("/", UserRetrieve)
+	router.PUT("/update", UserUpdate)
+	router.DELETE("/delete", UserDelete)
+
+	router.GET("/ping", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"messages":    "pong",
+			"testMessage": "ping",
+		})
+	})
 }
