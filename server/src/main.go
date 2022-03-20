@@ -25,7 +25,7 @@ func main() {
 
 	router.GET("/testuser", users.UserRetrieve)
 	router.GET("/testdb", func(c *gin.Context) {
-		dsn := "host=localhost user=admin password=admin dbname=questar port=5432 sslmode=disable TimeZone=Asia/Tokyo"
+		dsn := "host=localhost user=admin password=admin dbname=questar port=5332 sslmode=disable TimeZone=Asia/Tokyo"
 
 		db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 		if err != nil {
