@@ -1,11 +1,12 @@
 CREATE TABLE IF NOT EXISTS users (
-    id VARCHAR(255) NOT NULL PRIMARY KEY,
-    username VARCHAR(20) NOT NULL,
+    id SERIAL PRIMARY KEY,
+    -- 後でランダムな数値に設定する
+    user_name VARCHAR(20) NOT NULL,
     password VARCHAR(30) NOT NULL
 );
-INSERT INTO users
-VALUES('1', 'testuser1', 'test1');
-INSERT INTO users
-VALUES('2', 'testuser2', 'test2');
-INSERT INTO users
-VALUES('3', 'testuser3', 'test3');
+INSERT INTO users(user_name, password)
+VALUES('testuser1', 'test1');
+INSERT INTO users(user_name, password)
+VALUES('testuser2', 'test2');
+INSERT INTO users(user_name, password)
+VALUES('testuser3', 'test3');
